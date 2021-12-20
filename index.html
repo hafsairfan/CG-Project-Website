@@ -65,9 +65,25 @@
 	<div id="wrapper" class="divided">
 
 		<!-- Hero -->
-		<section id="hero"
-			class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+
+
+		<!-- <section>
+
+			<h2 style="color: #918f8f;">Tower of Hanoi</h2>
+			<h6>A Raytraced Concept</h6>
+			<p class="major">The scene symbolizes a rite of passage that every CS student at Habib University have
+				been through, the infamous Tower of Hanoi. What struck us about the problem is how remarkably simple
+				was it to code a solution based on recursion. I might still be able to remember the three lines of
+				pseudocode which were implemented in the Programming Fundamentals course.</p>
+		</section> -->
+
+
+
+		<section class="banner style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+			id="scene">
 			<div class="content">
+				<br>
+
 				<h2 style="color: #918f8f;">Tower of Hanoi</h2>
 				<h6>A Raytraced Concept</h6>
 				<p class="major">The scene symbolizes a rite of passage that every CS student at Habib University have
@@ -76,8 +92,8 @@
 					pseudocode which were implemented in the Programming Fundamentals course.</p>
 			</div>
 			<div class="image">
-				<a href="render_images/Meshes/hanoi.png" target="_blank">
-					<img width="220" height="250" border="0" align="center" src="images/bg.jpg" />
+				<a href="render_images/Meshes/render1.jpeg" target="_blank">
+					<img border="0" align="center" src="render_images/Meshes/render1.jpeg" />
 				</a>
 			</div>
 		</section>
@@ -90,7 +106,8 @@
 				<p class="major">After visualizing the concept, the scene was modelled in Blender consisting of Blender
 					primitives
 					such as tori and Suzanne (the monkey) while other objects were hand-sculpted from cylinders and
-					circles. There are 9.7 million triangles in the scene with many of them being used to better
+					circles. There are <b style="color: black;">9.7 million triangles </b> in the scene with many of
+					them being used to better
 					approximate the curved surfaces, including the tori.</p>
 			</div>
 			<div class="image">
@@ -147,7 +164,7 @@
 						<p>For smoothing out edges, we implemented regular and random samplers in our raytracer.
 							Multiple rays are shot per pixel producing a much
 							nicer interpolation in the colors assigned to each pixel. Regular sampling, involves a fixed
-							number of rays for each pixel in our case, 4.
+							number of rays for each pixel in our case, 16.
 						</p>
 					</section>
 
@@ -200,60 +217,60 @@
 								<table class="alt">
 									<thead>
 										<tr>
-											<th>Acceleration Structure</th>
+											<th>Time With Oct Tree</th>
+											<th>Time Without Oct Tree</th>
 											<th>Number of Primitives (triangles)</th>
-											<th>Image Size</th>
-											<th>Time taken (in seconds)</th>
+											<th>Resolutions</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>Regular Grid On</td>
-											<td>15,178 </td>
-											<td>1024 x 1024</td>
-											<td>5.539991</td>
+											<td>6.102</td>
+											<td>3.618 </td>
+											<td>10</td>
+											<td>1920 x 1920</td>
 										</tr>
 										<tr>
-											<td>Regular Grid Off</td>
-											<td>15,178 </td>
-											<td>1024 x 1024</td>
-											<td>1236.096242</td>
+											<td>14.896</td>
+											<td>16.542 </td>
+											<td>100</td>
+											<td>1920 x 1920</td>
 										</tr>
 										<tr>
-											<td>Regular Grid On</td>
-											<td>15,178 </td>
-											<td>100 x 100</td>
-											<td>0.111991</td>
+											<td>49.21</td>
+											<td>173.202 </td>
+											<td>1000</td>
+											<td>1920 x 1920</td>
 										</tr>
 										<tr>
-											<td>Regular Grid Off</td>
-											<td>15,178 </td>
-											<td>100 x 100</td>
-											<td>12.079617</td>
+											<td>550.12</td>
+											<td>2200+ </td>
+											<td>1000</td>
+											<td>1920 x 1920</td>
 										</tr>
 										<tr>
-											<td>Regular Grid On</td>
-											<td>60,712 </td>
-											<td>100 x 100</td>
-											<td>0.166598</td>
+											<td>0.349</td>
+											<td>0.288 </td>
+											<td>10</td>
+											<td>400 x 400</td>
 										</tr>
 										<tr>
-											<td>Regular Grid Off</td>
-											<td>60,712 </td>
-											<td>100 x 100</td>
-											<td>49.082720</td>
+											<td>0.806</td>
+											<td>1.013 </td>
+											<td>100</td>
+											<td>400 x 400</td>
 										</tr>
 										<tr>
-											<td>Regular Grid On</td>
-											<td>242,848 </td>
-											<td>100 x 100</td>
-											<td>0.380353</td>
+											<td>3.855</td>
+											<td>7.895 </td>
+											<td>1000</td>
+											<td>400 x 400</td>
 										</tr>
 										<tr>
-											<td>Regular Grid Off</td>
-											<td>242,848 </td>
-											<td>100 x 100</td>
-											<td>200.939594</td>
+											<td>8.042</td>
+											<td>78.332 </td>
+											<td>10000</td>
+											<td>400 x 400</td>
 										</tr>
 									</tbody>
 								</table>
